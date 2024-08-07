@@ -11,15 +11,32 @@ app.use(fileuploader());
 app.use(express.static("public"));
 app.use(urlencoded("true"));
 
+let config = {
+    host: "127.0.0.1",
+    user: "root",
+    password: "admin@123",
+    database: "project",
+    dateStrings:true
+
+}
 // let config = {
-//     host: "127.0.0.1",
-//     user: "root",
-//     password: "admin@123",
-//     database: "project",
+//     host: "mysql-398298cf-kesbansal802-4457.e.aivencloud.com",
+//     user: "avnadmin",
+//     password: "AVNS_sDSlzbMO_3HxHiAoeyE",
+//     database: "defaultdb",
 //     dateStrings:true
 
 // }
-let config = "mysql://avnadmin:AVNS_sDSlzbMO_3HxHiAoeyE@mysql-398298cf-kesbansal802-4457.e.aivencloud.com:24405/defaultdb"
+// let config = "mysql://avnadmin:AVNS_sDSlzbMO_3HxHiAoeyE@mysql-398298cf-kesbansal802-4457.e.aivencloud.com:24405/defaultdb"
+// let config = {
+//     host: "b5htmlf8r0wci86mkclb-mysql.services.clever-cloud.com",
+//     user: "uek3drv7nw9cfsfh",
+//     password: "Y2TLUo9i7vsPNiSxIlCM",
+//     database: "b5htmlf8r0wci86mkclb",
+//     dateStrings:true
+
+// }
+
 var mysql = mysql2.createConnection(config);
 mysql.connect(function(err) {
     if (err == null)
