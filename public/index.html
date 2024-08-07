@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome to our site</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="script/index.js"></script>
+  <script>
+    $(document).ready(function(){
+      
+
+      $("#eye").mousedown(function(){
+                $("#pwd").prop("type","text"); 
+                $("#eye").removeClass("fa-eye").addClass("fa-eye-slash");
+            });
+            $("#eye").mouseup(function(){
+                $("#pwd").prop("type","password"); 
+                $("#eye").addClass("fa-eye").removeClass("fa-eye-slash");
+            });
+
+            $("#eye2").mousedown(function(){
+                $("#loginpwd").prop("type","text"); 
+                $("#eye2").removeClass("fa-eye").addClass("fa-eye-slash");
+            });
+            $("#eye2").mouseup(function(){
+                $("#loginpwd").prop("type","password"); 
+                $("#eye2").addClass("fa-eye").removeClass("fa-eye-slash");
+            });
+    })
+
+  </script>
+  <style>
+    .password-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .password-field {
+      padding-right: 30px;
+      /* Add some padding to the right to avoid overlap with the icon */
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 10px;
+      cursor: pointer;
+      user-select: none;
+      /* Prevent text selection when clicking */
+    }
+  </style>
+</head>
+
+<body class="" style="background-color: #000000;">
+  <nav class="navbar navbar-expand-lg " style="background-color: #F9E2AF;">
+    <div class="container-fluid">
+      <img src="https://images-platform.99static.com//7cI9GABIYO--25Xv_UL1v1yOY_4=/427x1324:928x1825/fit-in/500x500/99designs-contests-attachments/101/101951/attachment_101951694" alt="" height="5%" width="5%" style="margin-right: 1em;">
+      <a class="navbar-brand" href="#">
+        <H3 style="color: rgb(0, 0, 0);"><b>InspiraLink</b></H3>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <button type="button" class="btn  " data-bs-toggle="modal"
+              data-bs-target="#signupmodal"><b>Signup</b></button>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn " data-bs-toggle="modal" data-bs-target="#loginmodal"><b>Login</b></button>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="/#ourservices" style="text-decoration: none; color: inherit;">
+              <b>Our Services</b>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/#ourteam" style="text-decoration: none; color: inherit;">
+              <b>Our Team</b>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Contact" style="text-decoration: none; color: inherit;">
+              <b>Contact Us</b>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="2000">
+        <img src="projectpics/influencer-job-youtube.jpg" class="d-block w-100">
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="projectpics/flat-design-influencer.jpg" class="d-block w-100" alt="..." >
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="projectpics/flat-design-social-media-instagram.jpg" class="d-block w-100" alt="..." >
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="projectpics/outline-charity-event-youtube.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <center>
+    <h2 style="background-color:#F9E2AF ; line-height: 50px; color: rgb(255, 0, 0) ; " id="ourservices"><b>Our
+        Services</b></h2>
+  </center>
+
+  <div style="display: flex; flex-direction: row; justify-content: space-evenly;  padding:20px; flex-wrap: wrap;">
+    <div class="card text-centre" style="width: 18rem;">
+      <img src="projectpics/collab.jpg" class="card-img-top" alt="..." width="100%" height="250px">
+      <div class="card-body">
+        <center>
+          <h5 class="card-title">Collaborations</h5>
+        </center>
+      </div>
+    </div>
+    <div class="card text-centre" style="width: 18rem;">
+      <img src="projectpics/meet.jpg" class="card-img-top" alt="..." width="100%" height="250px">
+      <div class="card-body">
+        <center>
+          <h5 class="card-title">Meet & Greet</h5>
+        </center>
+      </div>
+    </div>
+    <div class="card text-centre" style="width: 18rem;">
+      <img src="projectpics/marketing-promotion.jpg" class="card-img-top" alt="..." width="100%" height="250px">
+      <div class="card-body">
+        <center>
+          <h5 class="card-title">Promotions</h5>
+        </center>
+      </div>
+    </div>
+  </div>
+
+  <center>
+    <h2 style="background-color:#F9E2AF ; line-height: 50px;" id="ourteam"><b>Our Team</b></h2>
+  </center>
+
+  <div style="display: flex; flex-direction: row; justify-content: space-evenly; padding:20px; flex-wrap: wrap;">
+
+    <div class="card " style="width: 400px;">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="projectpics/rajesh.enc" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-6">
+          <div class="card-body">
+            <h6 class="card-title">Under The Guidance of :</h6>
+            <h5 class="card-title">Rajesh Bansal</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card " style="width: 400px;">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="projectpics/KeshavBansal_competitions.jpeg" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-6">
+          <div class="card-body">
+            <h6 class="card-title">Main Lead:</h6>
+            <h5 class="card-title">Keshav Bansal</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="signupmodal" tabindex="-1" aria-labelledby="signupmodallLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Signup Here &nbsp;&nbsp;</h1>
+          <span style="color: red;" id="erronsignup"> &nbsp;</span>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="/signup" method="post">
+            <div class="mb-3">
+              <label for="txtemail" class="form-label">Email address</label>
+              <span style="color: red;">*</span>
+              <input type="email" class="form-control" id="txtemail" name="txtemail" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="pwd" class="form-label">Password</label>
+              <span style="color: red;" id="signpwderr">*</span>
+              <div class="password-container">
+                <input type="password" class=" form-control password-field" placeholder="Enter your password" id="pwd" name="pwd" onblur="isvalid(this)">
+                <span id="togglePassword" class="toggle-password"><i class="fa-solid fa-eye" id="eye"></i></span>
+              </div>
+            </div>
+            <!-- <div class="row">
+              <div class="col-md-8">
+                <label for="pwd" class="form-label">Password</label>
+                <input type="password" class="form-control" id="pwd" name="pwd" >
+                
+              </div>
+              <div class="col-md-4" >
+                <i class="fa-solid fa-eye" style="margin-left: -50px; margin-top: 45px;" onclick="doShowPass();" ></i>
+              </div>
+            </div> -->
+            <div class="mb-3">
+              <p>Type <span style="color: red;">*</span></p>
+              <select class="form-select" aria-label="Default select example" id="type" name="type">
+                <option selected>Open this select menu</option>
+                <option value="">Influencer</option>
+                <option value="">Collaborator</option>
+              </select>
+            </div>
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="signup">Signup</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal2  -->
+  <div class="modal fade" id="loginmodal" tabindex="-1" aria-labelledby="loginmodalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Login Here &nbsp;</h1>
+          <span id="loginerr">*</span>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="loginemail" class="form-label">Email address</label><span style="color: red;">*</span>
+              <input type="email" class="form-control" id="loginemail" name="loginemail" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+              <label for="loginpwd" class="form-label">Password</label><span style="color: red;">*</span>
+              <div class="password-container">
+              <input type="password" class="form-control password-field" id="loginpwd" name="loginpwd">
+              <span id="togglePassword" class="toggle-password"><i class="fa-solid fa-eye" id="eye2"></i></span></div>
+            </div>
+            <div class="mb-3">
+              <button type="button" class="btn"  style="color: cadetblue;" id="forgot">Forgot password</button>
+              <span id="frgtpswd">*</span>
+            </div>
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="login" name="login">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <center>
+    <h2 style="background-color:#F9E2AF ; line-height: 50px; color: rgb(6, 4, 4) ; " id="Contact"><b>Contact Us</b></h2>
+  </center>
+
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d13769.516333720418!2d75.52917201078276!3d30.368591724351834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sin!4v1721581157218!5m2!1sen!2sin"
+    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <footer class="text-center text-lg-start" style="background-color: #F9E2AF;">
+      <div class="container p-4">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h5 class="text">InspiraLink</h5>
+            <p>
+              "Connecting you with the influencers who inspire the world."
+            </p>
+          </div>
+    
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <!-- <h5 class="text-uppercase">Links</h5>
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 4</a>
+              </li>
+            </ul> -->
+          </div>
+    
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <!-- <h5 class="text-uppercase">Links</h5>
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 4</a>
+              </li>
+            </ul> -->
+          </div>
+        </div>
+      </div>
+    
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2024 Inspira Link:
+        <a class="text-white" href="https://yourwebsite.com/">yourwebsite.com</a>
+      </div>
+    </footer>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
