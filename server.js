@@ -28,14 +28,7 @@ let config = {
 
 // }
 // let config = "mysql://avnadmin:AVNS_sDSlzbMO_3HxHiAoeyE@mysql-398298cf-kesbansal802-4457.e.aivencloud.com:24405/defaultdb"
-// let config = {
-//     host: "b5htmlf8r0wci86mkclb-mysql.services.clever-cloud.com",
-//     user: "uek3drv7nw9cfsfh",
-//     password: "Y2TLUo9i7vsPNiSxIlCM",
-//     database: "b5htmlf8r0wci86mkclb",
-//     dateStrings:true
 
-// }
 
 var mysql = mysql2.createConnection(config);
 mysql.connect(function(err) {
@@ -46,7 +39,7 @@ mysql.connect(function(err) {
 
 })
 
-app.listen(2002, function () {
+app.listen(2024, function () {
     console.log("server start hogya");
 })
 
@@ -112,7 +105,7 @@ app.get("/login-process", function (req, resp) {
             resp.send(err.message)
             return;
         }
-        if (result.length==0){
+        if(result.length==0){
             resp.send("Invalid user or id")
             return;
         }
